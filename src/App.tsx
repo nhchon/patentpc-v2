@@ -12,7 +12,7 @@ function App() {
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-1">
               <Phone size={16} />
-              <span className="text-sm">(800) 234-5678</span>
+              <span className="text-sm">(888) 723-8320 </span>
             </div>
             <div className="flex items-center space-x-1">
               <Mail size={16} />
@@ -43,12 +43,12 @@ function App() {
             </div>
             <div className="flex items-center">
               <nav className="hidden md:flex space-x-6 mr-6">
-                <a href="#" className="text-gray-800 hover:text-blue-700 font-medium">Home</a>
-                <a href="#" className="text-gray-800 hover:text-blue-700 font-medium">About Us</a>
-                <a href="#" className="text-gray-800 hover:text-blue-700 font-medium">Services</a>
-                <a href="#" className="text-gray-800 hover:text-blue-700 font-medium">Industries</a>
-                <a href="#" className="text-gray-800 hover:text-blue-700 font-medium">Resources</a>
-                <a href="#" className="text-gray-800 hover:text-blue-700 font-medium">Contact</a>
+                <a href="https://patentpc.com/" className="text-gray-800 hover:text-blue-700 font-medium">Home</a>
+                <a href="https://patentpc.com/about" className="text-gray-800 hover:text-blue-700 font-medium">About</a>
+                <a href="https://patentpc.com/contact" className="text-gray-800 hover:text-blue-700 font-medium">Contact</a>
+                <a href="https://patentpc.com/blog" className="text-gray-800 hover:text-blue-700 font-medium">Blog</a>
+                <a href="https://ipcheck.patentpc.com/" className="text-gray-800 hover:text-blue-700 font-medium">Patenting Tools</a>
+                <a href="https://patentpc.com/patentfaqs" className="text-gray-800 hover:text-blue-700 font-medium">Patenting Research</a>
               </nav>
               <div className="hidden md:flex items-center space-x-3">
                 <a href="https://calendly.com/powerpatent/patentpc" className="bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-4 py-2 rounded-md text-sm font-medium transition">
@@ -85,17 +85,17 @@ function App() {
               </button>
             </div>
             <nav className="mt-8 space-y-6">
-              <a href="#" className="block text-gray-800 hover:text-blue-700 font-medium text-lg">Home</a>
-              <a href="#" className="block text-gray-800 hover:text-blue-700 font-medium text-lg">About Us</a>
-              <a href="#" className="block text-gray-800 hover:text-blue-700 font-medium text-lg">Services</a>
-              <a href="#" className="block text-gray-800 hover:text-blue-700 font-medium text-lg">Industries</a>
-              <a href="#" className="block text-gray-800 hover:text-blue-700 font-medium text-lg">Resources</a>
-              <a href="#" className="block text-gray-800 hover:text-blue-700 font-medium text-lg">Contact</a>
+              <a href="https://patentpc.com/" className="block text-gray-800 hover:text-blue-700 font-medium text-lg">Home</a>
+              <a href="https://patentpc.com/about" className="block text-gray-800 hover:text-blue-700 font-medium text-lg">About</a>
+              <a href="https://patentpc.com/contact" className="block text-gray-800 hover:text-blue-700 font-medium text-lg">Contact</a>
+              <a href="https://patentpc.com/blog" className="block text-gray-800 hover:text-blue-700 font-medium text-lg">Blog</a>
+              <a href="https://ipcheck.patentpc.com/" className="block text-gray-800 hover:text-blue-700 font-medium text-lg">Patenting Tools</a>
+              <a href="https://patentpc.com/patentfaqs" className="block text-gray-800 hover:text-blue-700 font-medium text-lg">Patenting Research</a>
               <div className="pt-4 space-y-4">
                 <a href="https://calendly.com/powerpatent/patentpc" className="block w-full bg-orange-500 hover:bg-orange-600 active:bg-orange-700 text-white px-4 py-2 rounded-md text-center font-medium transition">
                   Schedule A Call
                 </a>
-                <a href="https://patentpc.com/login" className="block w-full border border-orange-500 text-orange-500 hover:bg-orange-50 active:bg-orange-100 active:border-orange-600 active:text-orange-600 px-4 py-2 rounded-md text-center font-medium transition flex items-center justify-center">
+                <a href="https://app.patentpc.com/auth" className="block w-full border border-orange-500 text-orange-500 hover:bg-orange-50 active:bg-orange-100 active:border-orange-600 active:text-orange-600 px-4 py-2 rounded-md text-center font-medium transition flex items-center justify-center">
                   <LogIn size={16} className="mr-1" /> Login
                 </a>
               </div>
@@ -115,7 +115,7 @@ function App() {
                 <a href="https://calendly.com/powerpatent/patentpc" className="bg-orange-500 text-white hover:bg-orange-600 active:bg-orange-700 px-6 py-3 rounded-md font-medium transition">
                   Speak With An Attorney
                 </a>
-                <a href="https://patentpc.com/ip-quiz/" className="border border-white text-white hover:bg-orange-500 active:bg-orange-600 active:border-orange-300 px-6 py-3 rounded-md font-medium transition">
+                <a href="https://patentpc.com/quiz" className="border border-white text-white hover:bg-orange-500 active:bg-orange-600 active:border-orange-300 px-6 py-3 rounded-md font-medium transition">
                   Take IP Quiz
                 </a>
               </div>
