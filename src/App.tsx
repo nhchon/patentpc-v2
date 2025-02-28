@@ -5,7 +5,9 @@ import homeImg from './images/home.png';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
-
+  const openBlog = () => {
+    window.location.href = 'https://patentpc.com/blog'
+  }
   return (
     <div className="min-h-screen bg-white">
       {/* Top Bar */}
@@ -406,17 +408,17 @@ function App() {
                 </div>
               </div>
               <p className="text-gray-600 italic mb-6">
-                "PatentPC has been instrumental in helping us build and protect our IP portfolio. Their expertise in both legal and technical aspects has been invaluable to our business growth."
+              "I had the pleasure of working with patent attorney Bao Tran during the Maculus’s patent’s examiners review process. Bao's response has been timely every time, and I must express my utmost satisfaction with his exceptional skills and dedication. Our journey involved interacting with a particularly tough and smart patent examiner, and Bao proved to be an invaluable asset."
               </p>
               <div className="flex items-center">
-                <img 
+                {/* <img 
                   src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
                   alt="Client" 
                   className="w-12 h-12 rounded-full object-cover"
-                />
+                /> */}
                 <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">David Wilson</h4>
-                  <p className="text-gray-600">CEO, TechStart Solutions</p>
+                  <h4 className="text-lg font-semibold text-gray-900">Syed H Askari PHD</h4>
+                  <p className="text-gray-600">Founder and CEO at MACULUS Therapeutix Inc</p>
                 </div>
               </div>
             </div>
@@ -432,17 +434,17 @@ function App() {
                 </div>
               </div>
               <p className="text-gray-600 italic mb-6">
-                "Working with PatentPC has been a game-changer for our startup. Their strategic approach to IP protection has helped us secure funding and establish credibility in a competitive market."
+              "I worked with Bao during the first days at Align Technology as he was very involved in writing the Invisalign patents. Bao is in the top of his field which is why he has been so successful, and brought much success to every company he has been involved with. I would highly recommend Bao to anyone seeking a patent attorney.""
               </p>
               <div className="flex items-center">
-                <img 
+                {/* <img 
                   src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
                   alt="Client" 
                   className="w-12 h-12 rounded-full object-cover"
-                />
+                /> */}
                 <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">Jennifer Lee</h4>
-                  <p className="text-gray-600">Founder, InnovateMed</p>
+                  <h4 className="text-lg font-semibold text-gray-900">Mari Sawtelle Dunn</h4>
+                  <p className="text-gray-600">Founder of Mari's List, Sawtelle Dunn Consulting</p>
                 </div>
               </div>
             </div>
@@ -458,17 +460,18 @@ function App() {
                 </div>
               </div>
               <p className="text-gray-600 italic mb-6">
-                "As a first-time inventor, I was overwhelmed by the patent process. PatentPC provided clear guidance and expert support throughout the journey, resulting in a successful patent application."
+                "I worked with Attorney Tran on a number of trademarks and patent filings for our startup. He was easy to work with and he had expertise in many domains. Attorney Tran had special techniques and AI secret sauce to get my cases filed first with the Patent Office. Since I was the first-to-file I get early patent dates, I recommend all startups and entrepreneurs to use PatentPC. It is never too late to protect your IP."
               </p>
               <div className="flex items-center">
-                <img 
+                {/* <img 
                   src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
                   alt="Client" 
                   className="w-12 h-12 rounded-full object-cover"
-                />
+                /> */}
                 <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">Robert Martinez</h4>
-                  <p className="text-gray-600">Independent Inventor</p>
+                  <h4 className="text-lg font-semibold text-gray-900">John Huynh
+                  </h4>
+                  <p className="text-gray-600">Founder, CTO of tech startups.</p>
                 </div>
               </div>
             </div>
@@ -503,7 +506,7 @@ function App() {
               <p className="text-gray-400 mb-4">
                 Protecting innovations and intellectual property since 2005.
               </p>
-              <div className="flex space-x-4">
+              {/* <div className="flex space-x-4">
                 <a href="https://www.facebook.com/patentpc" className="text-gray-400 hover:text-white active:text-orange-400">
                   <Facebook size={20} />
                 </a>
@@ -513,7 +516,7 @@ function App() {
                 <a href="https://www.linkedin.com/company/patentpc" className="text-gray-400 hover:text-white active:text-orange-400">
                   <Linkedin size={20} />
                 </a>
-              </div>
+              </div> */}
             </div>
             
             <div>
@@ -530,10 +533,10 @@ function App() {
             <div>
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <ul className="space-y-2">
-                <li><a href="https://patentpc.com/resources/faqs/" className="text-gray-400 hover:text-white active:text-orange-400">FAQs</a></li>
-                <li><a href="https://patentpc.com/resources/glossary/" className="text-gray-400 hover:text-white active:text-orange-400">Glossary</a></li>
-                <li><a href="https://patentpc.com/resources/articles/" className="text-gray-400 hover:text-white active:text-orange-400">Articles</a></li>
-                <li><a href="https://patentpc.com/resources/guides/" className="text-gray-400 hover:text-white active:text-orange-400">Guides</a></li>
+                <li><a href="https://patentpc.com/patentfaqs" className="text-gray-400 hover:text-white active:text-orange-400">FAQs</a></li>
+                <li><a href="https://patentpc.com/patentfaqs" className="text-gray-400 hover:text-white active:text-orange-400">Glossary</a></li>
+                <li><a href="https://patentpc.com/blog" className="text-gray-400 hover:text-white active:text-orange-400">Articles</a></li>
+                <li><a href="https://patentpc.com/patentfaqs" className="text-gray-400 hover:text-white active:text-orange-400">Guides</a></li>
               </ul>
             </div>
             
@@ -542,7 +545,7 @@ function App() {
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <Phone size={16} className="mr-2" />
-                  <a href="tel:+18002345678" className="text-gray-400 hover:text-white active:text-orange-400">(800) 234-5678</a>
+                  <a href="tel:+18002345678" className="text-gray-400 hover:text-white active:text-orange-400">(888) 723-8320</a>
                 </li>
                 <li className="flex items-center">
                   <Mail size={16} className="mr-2" />
