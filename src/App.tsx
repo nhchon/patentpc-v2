@@ -1,6 +1,8 @@
 import React from 'react';
 import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowRight, LogIn } from 'lucide-react';
 
+import homeImg from './images/home.png';
+
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
@@ -24,12 +26,12 @@ function App() {
               <MapPin size={16} />
               <span className="text-sm">4701 Patrick Henry Dr, Building #16, Santa Clara, CA 95054</span>
             </div>
-            <div className="flex items-center space-x-2">
+            {/* <div className="flex items-center space-x-2">
               <Facebook size={16} />
               <Twitter size={16} />
               <Instagram size={16} />
               <Linkedin size={16} />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
@@ -121,8 +123,9 @@ function App() {
               </div>
             </div>
             <div className="md:w-1/2">
+            {/* "https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" */}
               <img 
-                src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                src={homeImg} 
                 alt="Patent Professional" 
                 className="rounded-lg shadow-xl"
               />
