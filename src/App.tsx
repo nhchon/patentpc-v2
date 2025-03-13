@@ -2,12 +2,27 @@ import React from 'react';
 import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, ArrowRight, LogIn } from 'lucide-react';
 
 import homeImg from './images/home.png';
+import placeholderImg from './images/video-home-placeholder.webp';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
   const openBlog = () => {
-    window.location.href = 'https://patentpc.com/blog'
+    window.location.replace('https://patentpc.com/go-blog');
+    // window.location.href = 'https://patentpc.com/blog'
   }
+
+  const openTestimonialVideo = () => {
+    if (document) {
+      const div = document?.getElementById('youtube_video');
+      if (div) {
+        div!.innerHTML = `
+          <iframe style="display:inline;" width="700" height="381" src="https://www.youtube.com/embed/-w-2Te3Ihdg?si=ugWvs62U7YkOwklX&autoplay=1" title="Inventor Wayne Turner's Patent Journey" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        `;
+      }
+      
+    }
+  }
+
   return (
     <div className="min-h-screen bg-white">
       {/* Top Bar */}
@@ -50,7 +65,7 @@ function App() {
                 <a href="https://patentpc.com/" className="text-gray-800 hover:text-blue-700 font-medium">Home</a>
                 <a href="https://patentpc.com/about" className="text-gray-800 hover:text-blue-700 font-medium">About</a>
                 <a href="https://patentpc.com/contact" className="text-gray-800 hover:text-blue-700 font-medium">Contact</a>
-                <a href="https://patentpc.com/blog" className="text-gray-800 hover:text-blue-700 font-medium">Blog</a>
+                <a href="#" onClick={(e) => { e.preventDefault(); openBlog()} } className="text-gray-800 hover:text-blue-700 font-medium">Blog</a>
                 <a href="https://ipcheck.patentpc.com/" className="text-gray-800 hover:text-blue-700 font-medium">Patenting Tools</a>
                 <a href="https://patentpc.com/patentfaqs" className="text-gray-800 hover:text-blue-700 font-medium">Patenting Research</a>
               </nav>
@@ -131,6 +146,103 @@ function App() {
                 alt="Patent Professional" 
                 className="rounded-lg shadow-xl"
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials */}
+      <section className="py-16 bg-gray-50">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Don't just take our word for it. Here's what our clients have to say about our services.
+            </p>
+          </div>
+
+          <div className="text-center mb-16" id='youtube_video'>
+            <img onClick={openTestimonialVideo} src={placeholderImg} alt="Inventor Wayne Turner's Patent Journey" style={{ maxWidth: '700px', cursor: 'pointer', display: 'inline'}}/>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="flex items-center mb-4">
+                <div className="text-yellow-400 flex">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-600 italic mb-6">
+              "I had the pleasure of working with patent attorney Bao Tran during the Maculus’s patent’s examiners review process. Bao's response has been timely every time, and I must express my utmost satisfaction with his exceptional skills and dedication. Our journey involved interacting with a particularly tough and smart patent examiner, and Bao proved to be an invaluable asset."
+              </p>
+              <div className="flex items-center">
+                {/* <img 
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                  alt="Client" 
+                  className="w-12 h-12 rounded-full object-cover"
+                /> */}
+                <div className="ml-4">
+                  <h4 className="text-lg font-semibold text-gray-900">Syed H Askari PHD</h4>
+                  <p className="text-gray-600">Founder and CEO at MACULUS Therapeutix Inc</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="flex items-center mb-4">
+                <div className="text-yellow-400 flex">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-600 italic mb-6">
+              "I worked with Bao during the first days at Align Technology as he was very involved in writing the Invisalign patents. Bao is in the top of his field which is why he has been so successful, and brought much success to every company he has been involved with. I would highly recommend Bao to anyone seeking a patent attorney.""
+              </p>
+              <div className="flex items-center">
+                {/* <img 
+                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                  alt="Client" 
+                  className="w-12 h-12 rounded-full object-cover"
+                /> */}
+                <div className="ml-4">
+                  <h4 className="text-lg font-semibold text-gray-900">Mari Sawtelle Dunn</h4>
+                  <p className="text-gray-600">Founder of Mari's List, Sawtelle Dunn Consulting</p>
+                </div>
+              </div>
+            </div>
+            
+            <div className="bg-white p-8 rounded-lg shadow-md">
+              <div className="flex items-center mb-4">
+                <div className="text-yellow-400 flex">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+              </div>
+              <p className="text-gray-600 italic mb-6">
+                "I worked with Attorney Tran on a number of trademarks and patent filings for our startup. He was easy to work with and he had expertise in many domains. Attorney Tran had special techniques and AI secret sauce to get my cases filed first with the Patent Office. Since I was the first-to-file I get early patent dates, I recommend all startups and entrepreneurs to use PatentPC. It is never too late to protect your IP."
+              </p>
+              <div className="flex items-center">
+                {/* <img 
+                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
+                  alt="Client" 
+                  className="w-12 h-12 rounded-full object-cover"
+                /> */}
+                <div className="ml-4">
+                  <h4 className="text-lg font-semibold text-gray-900">John Huynh
+                  </h4>
+                  <p className="text-gray-600">Founder, CTO of tech startups.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -386,98 +498,7 @@ function App() {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Don't just take our word for it. Here's what our clients have to say about our services.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="text-yellow-400 flex">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-600 italic mb-6">
-              "I had the pleasure of working with patent attorney Bao Tran during the Maculus’s patent’s examiners review process. Bao's response has been timely every time, and I must express my utmost satisfaction with his exceptional skills and dedication. Our journey involved interacting with a particularly tough and smart patent examiner, and Bao proved to be an invaluable asset."
-              </p>
-              <div className="flex items-center">
-                {/* <img 
-                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
-                  alt="Client" 
-                  className="w-12 h-12 rounded-full object-cover"
-                /> */}
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">Syed H Askari PHD</h4>
-                  <p className="text-gray-600">Founder and CEO at MACULUS Therapeutix Inc</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="text-yellow-400 flex">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-600 italic mb-6">
-              "I worked with Bao during the first days at Align Technology as he was very involved in writing the Invisalign patents. Bao is in the top of his field which is why he has been so successful, and brought much success to every company he has been involved with. I would highly recommend Bao to anyone seeking a patent attorney.""
-              </p>
-              <div className="flex items-center">
-                {/* <img 
-                  src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
-                  alt="Client" 
-                  className="w-12 h-12 rounded-full object-cover"
-                /> */}
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">Mari Sawtelle Dunn</h4>
-                  <p className="text-gray-600">Founder of Mari's List, Sawtelle Dunn Consulting</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="flex items-center mb-4">
-                <div className="text-yellow-400 flex">
-                  {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
-                </div>
-              </div>
-              <p className="text-gray-600 italic mb-6">
-                "I worked with Attorney Tran on a number of trademarks and patent filings for our startup. He was easy to work with and he had expertise in many domains. Attorney Tran had special techniques and AI secret sauce to get my cases filed first with the Patent Office. Since I was the first-to-file I get early patent dates, I recommend all startups and entrepreneurs to use PatentPC. It is never too late to protect your IP."
-              </p>
-              <div className="flex items-center">
-                {/* <img 
-                  src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" 
-                  alt="Client" 
-                  className="w-12 h-12 rounded-full object-cover"
-                /> */}
-                <div className="ml-4">
-                  <h4 className="text-lg font-semibold text-gray-900">John Huynh
-                  </h4>
-                  <p className="text-gray-600">Founder, CTO of tech startups.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* CTA Section */}
       <section className="py-20 bg-blue-900 text-white">
