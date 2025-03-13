@@ -3,6 +3,7 @@ import { Menu, X, ChevronRight, Phone, Mail, MapPin, Facebook, Twitter, Instagra
 
 import homeImg from './images/home.png';
 import placeholderImg from './images/video-home-placeholder.webp';
+import patentPCLogo from './images/patentpc-logo.webp';
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
@@ -58,7 +59,24 @@ function App() {
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
-              <span className="text-2xl font-bold text-blue-900">PatentPC</span>
+              {/* <span className="text-2xl font-bold text-blue-900">PatentPC</span> */}
+              <h3 className="logo" style={{ lineHeight: 160 + "%" }}>
+              <a href="/">
+                <img
+                  src={patentPCLogo}
+                  alt="PatentPC"
+                  width="150px"
+                  height="35px"
+                />
+              </a>
+              <a
+                style={{ fontSize: 16 + "px", color: '#6c757d' }}
+                href="tel:8887238320"
+                className="font-bold"
+              >
+                (888) 723 8320
+              </a>
+            </h3>
             </div>
             <div className="flex items-center">
               <nav className="hidden md:flex space-x-6 mr-6">
