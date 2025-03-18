@@ -17,7 +17,7 @@ function App() {
       const div = document?.getElementById('youtube_video');
       if (div) {
         div!.innerHTML = `
-          <iframe style="display:inline;" width="700" height="381" src="https://www.youtube.com/embed/UoZBkqi7ZJU?si=qBriNSZj_cLF5KNj&autoplay=1" title="Inventor Wayne Turner's Patent Journey" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe style="display:inline;" width="700" height="381" src="https://www.youtube.com/embed/UoZBkqi7ZJU?si=qBriNSZj_cLF5KNj&autoplay=1" title="Patenting Journey from Inventor's Perspective | PatentPC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         `;
       }
       
@@ -180,7 +180,7 @@ function App() {
           </div>
 
           <div className="text-center mb-16" id='youtube_video'>
-            <img onClick={openTestimonialVideo} src={placeholderImg} alt="Inventor Wayne Turner's Patent Journey" style={{ maxWidth: '700px', cursor: 'pointer', display: 'inline'}}/>
+            <img onClick={openTestimonialVideo} src={placeholderImg} alt="Patenting Journey from Inventor's Perspective | PatentPC" style={{ maxWidth: '700px', cursor: 'pointer', display: 'inline'}}/>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
