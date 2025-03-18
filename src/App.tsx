@@ -17,7 +17,7 @@ function App() {
       const div = document?.getElementById('youtube_video');
       if (div) {
         div!.innerHTML = `
-          <iframe style="display:inline;" width="700" height="381" src="https://www.youtube.com/embed/-w-2Te3Ihdg?si=ugWvs62U7YkOwklX&autoplay=1" title="Inventor Wayne Turner's Patent Journey" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <iframe style="display:inline;" width="700" height="381" src="https://www.youtube.com/embed/UoZBkqi7ZJU?si=qBriNSZj_cLF5KNj&autoplay=1" title="Inventor Wayne Turner's Patent Journey" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         `;
       }
       
